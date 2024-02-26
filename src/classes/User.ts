@@ -1,20 +1,33 @@
 import { Address } from "cluster";
 
 export default class User {
-    protected Id: string;
-    public FirstName: string;
-    public LastName: string;
-    public Address: Address;
-    public CompanyName: string;
-    public Username: string;
+    protected Id: string | undefined;
+    public FirstName: string | undefined;
+    public LastName: string | undefined;
+    public Address: Address | undefined;
+    public CompanyName: string | undefined;
+    public Username: string | undefined;
+    public PhoneNumber: string | undefined;
+    public Email: string | undefined;
     private Password: string | undefined;
 
-    constructor(uid: string, firstname: string, lastname: string, addrs: Address, company: string, usrname: string) {
-        this.Id = uid;
+    constructor(firstname: string, lastname: string) {
         this.FirstName = firstname;
         this.LastName = lastname;
+    }
+
+    setContactInfo(addrs: Address, company: string, phoneNumber: string, emailAddrs: string) {
         this.Address = addrs;
         this.CompanyName = company;
-        this.Username = usrname;
+        this.PhoneNumber = phoneNumber;
+        this.Email = emailAddrs;
     }
+
+    initUser(uid: string, usrname: string, pwd: string) {
+        this.Id = uid;
+        this.Username = usrname;
+        this.Password = pwd;
+    }
+
+
 }
