@@ -13,12 +13,12 @@ const override: SerializedStyles = css`
     border-color: red;
 `;
 
-const Loader: FC<LoaderProps> = ({ isLoading }) => {
+const Loader = ({ isLoading }: LoaderProps) => {
     return (
         <div className="loader">
             <ClipLoader color="#000" loading={isLoading} css={override} size={50} />
         </div>
-    );
+    )
 }
 
 export default Loader;
