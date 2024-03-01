@@ -1,5 +1,6 @@
 import React from "react";
 import { PropsWithChildren } from "react";
+import ReactDOM from "react-dom";
 import './SideDrawer.css';
 
 type DrawerProps = {
@@ -7,7 +8,10 @@ type DrawerProps = {
 }
 
 const SideDrawer = (props: PropsWithChildren<DrawerProps>) => {
-    return <aside className="side-drawer">{props.children}</aside>
+    const content = <aside className="side-drawer">{props.children}</aside>;
+    // add to add the null assertion ! at the end of document.getElementById
+    // ! assures typscript this value is never null
+    return ReactDOM.createPortal(content, document.getElementById('drawer-hook')!);
 };
 
 export default SideDrawer;
