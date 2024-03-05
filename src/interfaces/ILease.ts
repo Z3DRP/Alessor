@@ -1,7 +1,7 @@
 // make it so leases can be inputed on a form and then
 // automatically exported as a document, this will also allow updates
-export default interface Lease {
-    Id: String;
+export default interface ILease {
+    Id: String | undefined;
     Name?: String;
     ValidFrom?: Date;
     ValidTo?: Date;

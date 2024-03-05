@@ -1,5 +1,5 @@
-export default interface Monument {
-    Id: string;
+export default interface IMonument {
+    Id: string | undefined;
     Name?: string;
     Longitude?: number;
     Latitude?: number;

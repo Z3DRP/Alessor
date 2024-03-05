@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { RouterType } from "../../types/Router.types";
+import { RouterType } from "../../interfaces/Router.types";
 import Dashboard from "../Dashboard/Dashboard";
 import HouseSearch from "../HouseSearch/HouseSearch";
 import Lease from "../Lease/Lease";
@@ -7,40 +7,46 @@ import Login from "../Login/Login";
 import Properties from "../Properties/Properties";
 import Register from '../Register/Register';
 import Tenants from "../Tenants/Tenants";
+import Tasks from "../Tasks/Tasks";
 
 const PagesData: RouterType[] = [
     {
-        path: "",
+        path: '',
         element: <Login />,
-        title: "Login"
+        title: 'Login'
     },
     {
-        path: "dashboard",
+        path: 'dashboard',
         element: <Dashboard />,
-        title: "Dashboard"
+        title: 'Dashboard'
     }, {
-        path: "houseSearch",
+        path: 'houseSearch',
         element: <HouseSearch />,
-        title: "HouseSearch"
+        title: 'HouseSearch'
     }, {
-        path: "lease",
+        path: 'lease',
         element: <Lease />,
-        title: "Lease"
+        title: 'Lease'
     },
     {
-        path: "properties",
+        path: 'properties',
         element: <Properties />,
-        title: "Properties"
+        title: 'Properties'
     }, 
     {
-        path: "tenants",
+        path: 'tenants',
         element: <Tenants />,
-        title: "Tenants"
+        title: 'Tenants'
     },
     {
-        path: "register",
+        path: 'register',
         element: <Register />,
-        title: "Register"
+        title: 'Register'
+    },
+    {
+        path: 'tasks',
+        element: <Tasks />,
+        title: 'Tasks'
     }
 ];
 

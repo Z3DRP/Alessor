@@ -1,8 +1,8 @@
 import { DeedTypes } from "./DeedTypes";
 
-export default interface Deed {
-    Id: string;
-    Name: string;
+export default interface IDeed {
+    Id: string | undefined;
+    Name?: string;
     Covenant?: string;
     Restrictions?: string;
     Document?: string;

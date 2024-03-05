@@ -2,7 +2,7 @@ import React from 'react';
 import './NavLinks.css';
 import { NavLink } from 'react-router-dom';
 import PagesData from '../../pages/PagesData/PagesData';
-import { RouterType } from '../../types/Router.types';
+import { RouterType } from '../../interfaces/Router.types';
 
 const NavLinks = () => {
     const links = PagesData.map(({ title, path }: RouterType) => {

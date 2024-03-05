@@ -1,4 +1,4 @@
-export default interface Address {
+export default interface IAddress {
     Street: string;
     City: string;
     County: string;
