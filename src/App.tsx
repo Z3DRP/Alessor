@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { toast, ToastContainer } from 'react-toastify';
 import Loader from './components/Loader/Loader';
-import ToastOptions from './types/ToastOptions';
+import ToastOptions from './interfaces/ToastOptions';
 import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Router from './pages/Router/Router';

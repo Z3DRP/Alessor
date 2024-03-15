@@ -8,5 +8,6 @@ export default interface IUser{
     Username?: string | undefined;
     PhoneNumber?: string | undefined;
     Email?: string | undefined;
+    Image?: string | undefined;
     Password?: string | undefined;
 }

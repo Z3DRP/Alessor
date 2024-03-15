@@ -9,3 +9,11 @@ export const generateUid = () => {
     // generate id method
     // NOTE accept a generic and then determine type and prefix id with a letter like A, T, P etc
 }
+
+export const displayAddress = (addrs: IAddress): string => {
+    return `${addrs.Street}, ${addrs.City} ${addrs.Zipcode}, ${addrs.County}, ${addrs.State}, ${addrs.Country}`;
+}
+
+export const displayStreetAddress = (addrs: IAddress): string => {
+    return `${addrs.Street}, ${addrs.City} ${addrs.Zipcode}`;
+}
